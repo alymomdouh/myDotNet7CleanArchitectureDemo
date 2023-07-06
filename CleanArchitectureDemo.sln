@@ -3,9 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{5EE174BA-30B6-4748-A435-308E79E0C440}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{37C08724-0F62-4A8A-B810-6056F9838718}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{E4E45E41-0F31-4B78-8B78-475C7C26C146}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureDemo.Domain", "CleanArchitectureDemo.Domain\CleanArchitectureDemo.Domain.csproj", "{29114599-EAD4-468F-8554-2C902BBC738F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureDemo.Application", "CleanArchitectureDemo.Application\CleanArchitectureDemo.Application.csproj", "{E97F1F2D-69E7-4402-B16B-D48398125642}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29114599-EAD4-468F-8554-2C902BBC738F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29114599-EAD4-468F-8554-2C902BBC738F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29114599-EAD4-468F-8554-2C902BBC738F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29114599-EAD4-468F-8554-2C902BBC738F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E97F1F2D-69E7-4402-B16B-D48398125642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E97F1F2D-69E7-4402-B16B-D48398125642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E97F1F2D-69E7-4402-B16B-D48398125642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E97F1F2D-69E7-4402-B16B-D48398125642}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{29114599-EAD4-468F-8554-2C902BBC738F} = {5EE174BA-30B6-4748-A435-308E79E0C440}
+		{E97F1F2D-69E7-4402-B16B-D48398125642} = {5EE174BA-30B6-4748-A435-308E79E0C440}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C3CD028F-5E5A-495A-BFB2-8AC123D90C80}
