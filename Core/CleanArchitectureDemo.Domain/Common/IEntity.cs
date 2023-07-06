@@ -1,4 +1,4 @@
-﻿namespace CleanArchitectureDemo.Domain.Entities
+﻿namespace CleanArchitectureDemo.Domain.Common
 {
     public interface IEntity
     {
