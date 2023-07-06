@@ -1,4 +1,4 @@
-﻿namespace CleanArchitectureDemo.Domain.Common
+﻿namespace CleanArchitectureDemo.Domain.Common.Interfaces
 {
     public interface IAuditableEntity : IEntity
     {
