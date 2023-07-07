@@ -2,6 +2,10 @@
 
 namespace CleanArchitectureDemo.Application.Features.Players.Queries.GetPlayersWithPagination
 {
+    /// <summary>
+    /// The GetPlayersWithPagination folder also has the following GetPlayersWithPaginationValidator 
+    /// class that can be used to validate the input parameters of the query.
+    /// </summary>
     public class GetPlayersWithPaginationValidator : AbstractValidator<GetPlayersWithPaginationQuery>
     {
         public GetPlayersWithPaginationValidator()
