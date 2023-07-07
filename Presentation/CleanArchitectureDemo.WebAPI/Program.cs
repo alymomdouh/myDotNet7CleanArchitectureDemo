@@ -1,4 +1,7 @@
 
+using CleanArchitectureDemo.Application.Extensions;
+using CleanArchitectureDemo.Infrastructure.Extensions;
+using CleanArchitectureDemo.Persistence.Extensions;
 namespace CleanArchitectureDemo.WebAPI
 {
     public class Program
@@ -7,7 +10,10 @@ namespace CleanArchitectureDemo.WebAPI
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            // Add services to the container. 
+            builder.Services.AddApplicationLayer();
+            builder.Services.AddInfrastructureLayer();
+            builder.Services.AddPersistenceLayer(builder.Configuration);
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -19,6 +25,7 @@ namespace CleanArchitectureDemo.WebAPI
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
+                app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
@@ -30,7 +37,7 @@ namespace CleanArchitectureDemo.WebAPI
 
             app.MapControllers();
 
-            app.Run();
+            app.Run(); 
         }
     }
 }

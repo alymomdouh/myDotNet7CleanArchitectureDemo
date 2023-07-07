@@ -4,6 +4,7 @@ using CleanArchitectureDemo.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace CleanArchitectureDemo.Persistence.Extensions
 {
@@ -16,10 +17,10 @@ namespace CleanArchitectureDemo.Persistence.Extensions
             services.AddRepositories();
         }
 
-        //private static void AddMappings(this IServiceCollection services)
-        //{
-        //    services.AddAutoMapper(Assembly.GetExecutingAssembly());
-        //}
+        private static void AddMappings(this IServiceCollection services)
+        {
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+        }
 
         public static void AddDbContext(this IServiceCollection services, IConfiguration configuration)
         {
