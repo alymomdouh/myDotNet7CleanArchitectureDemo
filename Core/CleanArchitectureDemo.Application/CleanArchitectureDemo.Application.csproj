@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Players\Queries\GetPlayersByClub\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Shared\CleanArchitectureDemo.Shared\CleanArchitectureDemo.Shared.csproj" />
     <ProjectReference Include="..\CleanArchitectureDemo.Domain\CleanArchitectureDemo.Domain.csproj" />
   </ItemGroup>
