@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Players\Queries\GetPlayerById\" />
     <Folder Include="Features\Players\Queries\GetPlayersByClub\" />
   </ItemGroup>
 
