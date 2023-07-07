@@ -21,7 +21,6 @@
     <Folder Include="Features\Players\Queries\GetAllPlayers\" />
     <Folder Include="Features\Players\Queries\GetPlayerById\" />
     <Folder Include="Features\Players\Queries\GetPlayersByClub\" />
-    <Folder Include="Interfaces\" />
   </ItemGroup>
 
   <ItemGroup>
