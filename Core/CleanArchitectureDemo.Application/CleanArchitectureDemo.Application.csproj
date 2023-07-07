@@ -16,10 +16,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Players\Commands\DeletePlayer\" />
+    <Folder Include="Features\Players\Commands\UpdatePlayer\" />
+    <Folder Include="Features\Players\Queries\GetAllPlayers\" />
+    <Folder Include="Features\Players\Queries\GetPlayerById\" />
+    <Folder Include="Features\Players\Queries\GetPlayersByClub\" />
     <Folder Include="Interfaces\" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\CleanArchitectureDemo.Shared\CleanArchitectureDemo.Shared.csproj" />
     <ProjectReference Include="..\CleanArchitectureDemo.Domain\CleanArchitectureDemo.Domain.csproj" />
   </ItemGroup>
 
