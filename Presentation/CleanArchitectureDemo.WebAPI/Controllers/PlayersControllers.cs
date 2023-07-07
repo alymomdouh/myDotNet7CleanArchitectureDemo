@@ -1,4 +1,9 @@
 ﻿using CleanArchitectureDemo.Application.Features.Players.Commands.CreatePlayer;
+using CleanArchitectureDemo.Application.Features.Players.Commands.DeletePlayer;
+using CleanArchitectureDemo.Application.Features.Players.Commands.UpdatePlayer;
+using CleanArchitectureDemo.Application.Features.Players.Queries.GetAllPlayers;
+using CleanArchitectureDemo.Application.Features.Players.Queries.GetPlayerById;
+using CleanArchitectureDemo.Application.Features.Players.Queries.GetPlayersByClub;
 using CleanArchitectureDemo.Application.Features.Players.Queries.GetPlayersWithPagination;
 using CleanArchitectureDemo.Shared;
 using MediatR;
