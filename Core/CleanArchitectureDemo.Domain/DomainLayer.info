@@ -1,0 +1,33 @@
+﻿ 
+  Domain Layer : 
+  This layer is the backbone of the clean architecture and 
+  all other projects defined in other layers should depend on this layer. 
+  This layer is highly abstracted and it contains domain entities, 
+  , value objects, aggregates, etc.   
+  --------------------------------------------------------------------------------------
+  Implementing Clean Architecture Domain Layer
+		The domain layer is the core component of clean architecture and 
+		it represents the domain and use-case-independent business logic of the system. 
+		This layer has no dependency on any technology, third-party library, or frameworks. 
+		It includes interfaces, entities, and value objects. 
+		All other projects should depend on the Domain layer. 
+		For our demo project, let’s create the following two folders Common and Entities in the project.
+
+		Common Folder
+			The Common folder contains base classes and interfaces.
+
+			IEntity.cs
+				This file contains a base IEntity interface and 
+				all domain entities will implement this interface either directly or indirectly.
+			IAuditableEntity.cs
+				This file defines a child interface of IEntity interfaces defined above. 
+				This interface adds additional properties to keep track of the entity’s audit trail information
+			IDomainEventDispatcher.cs
+				This interface declares a method that can be used to dispatch domain events throughout the application.
+			BaseEvent.cs
+				This file contains the BaseEvent class that will become the base class of all domain events throughout 
+				the application. It only has one property DateOccurred that tells us when a particular event has occurred.
+
+
+
+

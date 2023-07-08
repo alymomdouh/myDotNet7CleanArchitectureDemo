@@ -3,6 +3,9 @@ using MediatR;
 
 namespace CleanArchitectureDemo.Domain.Common
 {
+    /// <summary>
+    /// implementation method that can be used to dispatch domain events throughout the application.
+    /// </summary>
     public class DomainEventDispatcher : IDomainEventDispatcher
     {
         private readonly IMediator _mediator; 
