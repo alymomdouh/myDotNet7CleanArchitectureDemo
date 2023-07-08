@@ -1,10 +1,6 @@
-﻿using CleanArchitectureDemo.Application.Common.Mappings;
+﻿using AutoMapper;
+using CleanArchitectureDemo.Application.Common.Mappings;
 using CleanArchitectureDemo.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CleanArchitectureDemo.Application.Features.Players.Queries.GetPlayersWithPagination
 {
@@ -18,5 +14,15 @@ namespace CleanArchitectureDemo.Application.Features.Players.Queries.GetPlayersW
         public string TwitterUrl { get; init; }
         public string InstagramUrl { get; init; }
         public int DisplayOrder { get; init; }
+        public void Mapping(Profile profile)
+        {
+            var c = profile.CreateMap<Player, GetPlayersWithPaginationDto>()
+                 //.ForMember(d => d.PhotoUrl, opt => opt.Ignore())
+                 .ForMember(d => d.FacebookUrl, opt => opt.NullSubstitute("N/A"))
+                 .ForMember(d => d.InstagramUrl, opt => opt.NullSubstitute("N/A"))
+                 .ForMember(d => d.TwitterUrl, opt => opt.NullSubstitute("N/A"))
+                 .ForMember(d => d.HeightInCm, opt => opt.NullSubstitute(0))
+                 .ForMember(d => d.DisplayOrder, opt => opt.NullSubstitute(0));
+        }
     }
 }

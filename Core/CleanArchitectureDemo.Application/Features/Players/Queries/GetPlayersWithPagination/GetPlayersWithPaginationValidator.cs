@@ -11,7 +11,7 @@ namespace CleanArchitectureDemo.Application.Features.Players.Queries.GetPlayersW
         public GetPlayersWithPaginationValidator()
         {
             RuleFor(x => x.PageNumber)
-                .GreaterThanOrEqualTo(1)
+                .GreaterThanOrEqualTo(1) 
                 .WithMessage("PageNumber at least greater than or equal to 1.");
 
             RuleFor(x => x.PageSize)

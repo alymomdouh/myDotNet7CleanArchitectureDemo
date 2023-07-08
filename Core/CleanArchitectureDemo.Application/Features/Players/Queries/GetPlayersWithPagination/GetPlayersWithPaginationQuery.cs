@@ -39,6 +39,11 @@ namespace CleanArchitectureDemo.Application.Features.Players.Queries.GetPlayersW
                    .OrderBy(x => x.Name)
                    .ProjectTo<GetPlayersWithPaginationDto>(_mapper.ConfigurationProvider)
                    .ToPaginatedListAsync(query.PageNumber, query.PageSize, cancellationToken);
+
+            //var query1 = _unitOfWork.Repository<Player>().Entities
+            //      .OrderBy(x => x.Name);
+            //     var query12 = query1.ProjectTo<GetPlayersWithPaginationDto>(_mapper.ConfigurationProvider);
+            //return await query12.ToPaginatedListAsync(query.PageNumber, query.PageSize, cancellationToken);
         }
     }
 }
