@@ -3,6 +3,17 @@ using System.Reflection;
 
 namespace CleanArchitectureDemo.Application.Common.Mappings
 {
+    /// <summary>
+    /// We can simply implement IMapForm<T> interface on any class we want to map with the T class 
+    /// and AutoMapper will do the rest. Once we have all those classes ready to map, 
+    /// we don’t want to register them all manually so let’s add some automation in our MappingProfile class we created above.
+    
+    /// In the belaw code, we are using the .NET reflection framework 
+    /// to scan the assembly and looking for all classes that are implementing the IMapFrom interface. 
+    /// Once we have all those types available, we are simply invoking their Mapping method. 
+    /// We have already seen the default implementation of the Mapping method above 
+    /// which is calling the CreateMap method for the current type
+    /// </summary>
     public class MappingProfile : Profile
     {
         public MappingProfile()
