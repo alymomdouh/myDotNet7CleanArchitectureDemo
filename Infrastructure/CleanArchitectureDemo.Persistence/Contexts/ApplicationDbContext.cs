@@ -51,5 +51,10 @@ namespace CleanArchitectureDemo.Persistence.Contexts
         {
             return SaveChangesAsync().GetAwaiter().GetResult();
         }
+
+        //to run migrations 
+        // cd   Infrastructure/CleanArchitectureDemo.Persistence
+        //dotnet ef --startup-project ../../Presentation/CleanArchitectureDemo.WebAPI/CleanArchitectureDemo.WebAPI.csproj migrations add myMigration
+        //dotnet ef --startup-project ../../Presentation/CleanArchitectureDemo.WebAPI/CleanArchitectureDemo.WebAPI.csproj database update
     }
 }
