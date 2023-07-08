@@ -31,10 +31,12 @@ namespace CleanArchitectureDemo.Application.Features.Players.Commands.UpdatePlay
             var player = await _unitOfWork.Repository<Player>().GetByIdAsync(command.Id);
             if (player != null)
             {
-                player.Name = command.Name;
-                player.ShirtNo = command.ShirtNo;
-                player.PhotoUrl = command.PhotoUrl;
-                player.BirthDate = command.BirthDate;
+                //player.Name = command.Name;
+                //player.ShirtNo = command.ShirtNo;
+                //player.PhotoUrl = command.PhotoUrl;
+                //player.BirthDate = command.BirthDate;
+                // other way by auto mapper 
+                player = _mapper.Map<Player>(command);
 
                 await _unitOfWork.Repository<Player>().UpdateAsync(player);
                 player.AddDomainEvent(new PlayerUpdatedEvent(player));

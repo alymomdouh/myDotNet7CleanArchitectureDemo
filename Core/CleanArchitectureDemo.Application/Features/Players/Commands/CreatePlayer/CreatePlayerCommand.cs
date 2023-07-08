@@ -19,6 +19,17 @@ namespace CleanArchitectureDemo.Application.Features.Players.Commands.CreatePlay
         public int ShirtNo { get; set; }
         public string PhotoUrl { get; set; }
         public DateTime? BirthDate { get; set; }
+        /*
+         * if any change implement Mapping function and add what needed 
+        public void Mapping(Profile profile)
+        {
+            var c = profile.CreateMap<CreatePlayerCommand, Player>()
+                //.ForMember(d => d.PhotoUrl, opt => opt.Ignore())
+                 //.ForMember(d => d.ShirtNo, opt => opt.NullSubstitute("N/A"))
+                 //.ForMember(d => d.Name, opt => opt.MapFrom(s => s.Name));
+                 .ForMember(d => d.ShirtNo, opt => opt.MapFrom(s => 10));
+        }
+        */
     }
 
     internal class CreatePlayerCommandHandler : IRequestHandler<CreatePlayerCommand, Result<int>>
@@ -34,13 +45,15 @@ namespace CleanArchitectureDemo.Application.Features.Players.Commands.CreatePlay
 
         public async Task<Result<int>> Handle(CreatePlayerCommand command, CancellationToken cancellationToken)
         {
-            var player = new Player()
-            {
-                Name = command.Name,
-                ShirtNo = command.ShirtNo,
-                PhotoUrl = command.PhotoUrl,
-                BirthDate = command.BirthDate
-            };
+            //var player = new Player()
+            //{
+            //    Name = command.Name,
+            //    ShirtNo = command.ShirtNo,
+            //    PhotoUrl = command.PhotoUrl,
+            //    BirthDate = command.BirthDate
+            //};
+            var player = _mapper.Map<Player>(command);
+
             await _unitOfWork.Repository<Player>().AddAsync(player);
             player.AddDomainEvent(new PlayerCreatedEvent(player));
             await _unitOfWork.Save(cancellationToken);
