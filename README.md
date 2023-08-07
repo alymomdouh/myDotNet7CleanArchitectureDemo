@@ -14,6 +14,6 @@
 ### 8. [Data Access in ASP.NET Core using EF Core (Code First)](https://www.ezzylearning.net/tutorial/data-access-in-asp-net-core-using-ef-core-code-first)
 ### 9.[How To Support Multiple Versions of ASP.NET Core Web API](https://www.ezzylearning.net/tutorial/how-to-support-multiple-versions-of-asp-net-core-web-api)
 ### 10.[Builder Design Pattern in ASP.NET Core](https://www.ezzylearning.net/tutorial/builder-design-pattern-in-asp-net-core)
-
+### 11.[Implementing CQRS with MediatR in ASP.NET Core – Ultimate Guide](https://codewithmukesh.com/blog/cqrs-in-aspnet-core-3-1/)
 
 
